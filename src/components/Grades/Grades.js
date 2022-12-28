@@ -1,7 +1,8 @@
 import React from "react";
 import GradeItem from "./GradeItem";
 import "./Grades.css";
-import Card from "./Card";
+import Card from "../UI/Card";
+
 const Grades = (props) => {
   return (
     <Card className="grades">

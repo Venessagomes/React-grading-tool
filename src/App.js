@@ -1,6 +1,6 @@
 import "./App.css";
 import Grades from "./components/Grades/Grades";
-
+import NewGrade from "./components/NewGrade/NewGrade";
 
 function App() {
   const grades = [
@@ -26,8 +26,8 @@ function App() {
   ];
   return (
     <div>
-    <h2>Lets get started</h2>
-    <Grades items={grades}/>
+      <NewGrade />
+      <Grades items={grades} />
     </div>
   );
 }
