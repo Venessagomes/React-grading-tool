@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Grades from "./components/Grades/Grades";
+
 
 function App() {
+  const grades = [
+    {
+      id: "e1",
+      name: "Venessa",
+      score: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: "e2", name: "Gobi", score: 79.49, date: new Date(2021, 2, 12) },
+    {
+      id: "e3",
+      name: "Aidan",
+      score: 29.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: "e4",
+      name: "Tara",
+      score: 45.1,
+      date: new Date(2021, 5, 12),
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <h2>Lets get started</h2>
+    <Grades items={grades}/>
     </div>
   );
 }

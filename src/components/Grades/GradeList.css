@@ -1,0 +1,9 @@
+.grade-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grade-list__fallback {
+  color: white;
+  text-align: center;
+}
