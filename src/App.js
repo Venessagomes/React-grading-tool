@@ -2,7 +2,7 @@ import "./App.css";
 import Grades from "./components/Grades/Grades";
 import NewGrade from "./components/NewGrade/NewGrade";
 
-function App() {
+function App(props) {
   const grades = [
     {
       id: "e1",
@@ -24,9 +24,13 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addGradeHandler = (grade) => {
+    console.log(grade);
+  };
   return (
-    <div>
-      <NewGrade />
+    <div><h1>hello</h1>
+      <NewGrade onAddGrade={addGradeHandler} />
       <Grades items={grades} />
     </div>
   );

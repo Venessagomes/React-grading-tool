@@ -1,5 +1,5 @@
 .new-grade {
-  background-color: #07487d;
+  background-color: #e5446d;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
@@ -7,32 +7,35 @@
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  color: #2d3142;
 }
 
 .new-grade button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 1px solid #f0f6f6;
-  background-color: #ff66b3;
-  color: #f0f6f6;
+  border: 1px solid #f8f4e3;
+  background-color: #ff8966;
+  color: #f8f4e3;
   border-radius: 12px;
   margin-right: 1rem;
 }
 
 .new-grade button:hover,
 .new-grade button:active {
-  background-color: #ff66b3;
-  border-color: #ff66b3;
+  background-color: #f7e1d7;
+  border-color: #461220;
+  color: #0c0f0a;
+ 
 }
 
 .new-grade button.alternative {
-  color: #220131;
   border-color: transparent;
   background-color: transparent;
 }
 
 .new-grade button.alternative:hover,
 .new-grade button.alternative:active {
-  background-color: #07487d;
+  background-color: #f7e1d7;
+  
 }
