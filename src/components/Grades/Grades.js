@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import GradeItem from "./GradeItem";
 import "./Grades.css";
 import Card from "../UI/Card";
+import GradeFilter from "./GradeFilter";
 
 const Grades = (props) => {
+  const [filteredYear, setFilteredYear] = useState('2018')
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
   return (
     <Card className="grades">
+      <GradeFilter selected={filteredYear}onChangeHandler={filterChangeHandler} />
       <GradeItem
         name={props.items[0].name}
         score={props.items[0].score}
