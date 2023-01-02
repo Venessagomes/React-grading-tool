@@ -29,7 +29,7 @@ function App(props) {
     console.log(grade);
   };
   return (
-    <div><h1>hello</h1>
+    <div>
       <NewGrade onAddGrade={addGradeHandler} />
       <Grades items={grades} />
     </div>

@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0.5rem;
   margin: 1rem 0;
-  background-color: #706c61;
+  background-color: #ffffff;
 }
 
 .grade-item__description {
@@ -21,15 +21,15 @@
   font-size: 1rem;
   flex: 1;
   margin: 0 1rem;
-  color: #f8f4e3;
+  color: #252422;
 }
 
 .grade-item__score {
   font-size: 1rem;
   font-weight: bold;
-  color: #f8f4e3;
-  background-color: #ff8966;
-  border: 1px solid #f8f4e3;
+  color: #ffffff;
+  background-color: #4544ae;
+  border: 1px solid #ffffff;
   padding: 0.5rem;
   border-radius: 12px;
 }
