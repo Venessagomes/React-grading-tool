@@ -1,39 +1,26 @@
 import React, { useState } from "react";
-import GradeItem from "./GradeItem";
+import GradeList from "./GradeList";
 import "./Grades.css";
 import Card from "../UI/Card";
 import GradeFilter from "./GradeFilter";
 
 const Grades = (props) => {
-  const [filteredYear, setFilteredYear] = useState('2018')
+  const [filteredYear, setFilteredYear] = useState("2018");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+  const filteredGrades = props.items.filter((grade) => {
+    return grade.date.getFullYear().toString() === filteredYear;
+  });
 
   return (
     <Card className="grades">
-      <GradeFilter selected={filteredYear}onChangeHandler={filterChangeHandler} />
-      <GradeItem
-        name={props.items[0].name}
-        score={props.items[0].score}
-        date={props.items[0].date}
-      />
-      <GradeItem
-        name={props.items[1].name}
-        score={props.items[1].score}
-        date={props.items[1].date}
-      />
-      <GradeItem
-        name={props.items[2].name}
-        score={props.items[2].score}
-        date={props.items[2].date}
-      />
-      <GradeItem
-        name={props.items[3].name}
-        score={props.items[3].score}
-        date={props.items[3].date}
-      />
+      <GradeFilter
+        selected={filteredYear}
+        onChangeHandler={filterChangeHandler}
+        />
+      <GradeList items={filteredGrades}/>
     </Card>
   );
 };

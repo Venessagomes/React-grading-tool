@@ -47,8 +47,8 @@ const GradeForm = (props) => {
           <label>Date</label>
           <input
             type="date"
-            min="2017-01-01"
-            max="2022-12-31"
+            min="2018-01-01"
+            max="2023-12-31"
             onChange={dateChangeHandler}
             value={enteredDate}
           ></input>
@@ -66,6 +66,7 @@ const GradeForm = (props) => {
         </div>
       </div>
       <div className="new-grade__actions">
+        <button type="button" onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Grade</button>
       </div>
     </form>
