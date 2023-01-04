@@ -3,6 +3,7 @@ import GradeList from "./GradeList";
 import "./Grades.css";
 import Card from "../UI/Card";
 import GradeFilter from "./GradeFilter";
+import GradeChart from "./GradeChart";
 
 const Grades = (props) => {
   const [filteredYear, setFilteredYear] = useState("2018");
@@ -19,8 +20,9 @@ const Grades = (props) => {
       <GradeFilter
         selected={filteredYear}
         onChangeHandler={filterChangeHandler}
-        />
-      <GradeList items={filteredGrades}/>
+      />
+      <GradeChart grades={filteredGrades} />
+      <GradeList items={filteredGrades} />
     </Card>
   );
 };

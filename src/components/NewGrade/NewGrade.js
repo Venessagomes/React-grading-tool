@@ -11,20 +11,25 @@ const NewGrades = (props) => {
       id: Math.random().toString(),
     };
     props.onAddGrade(gradeDataaa);
-    setIsEditing(false)
+    setIsEditing(false);
   };
 
   const startEditing = () => {
     setIsEditing(true);
   };
-const stopEditing = () => {
-  setIsEditing(false)
-}
+  const stopEditing = () => {
+    setIsEditing(false);
+  };
 
   return (
     <div className="new-grade">
       {!isEditing && <button onClick={startEditing}>Add New Grade</button>}
-      {isEditing && <GradeForm onSaveGradeData={saveGradeDataHandler} onCancel={stopEditing} />}
+      {isEditing && (
+        <GradeForm
+          onSaveGradeData={saveGradeDataHandler}
+          onCancel={stopEditing}
+        />
+      )}
     </div>
   );
 };
