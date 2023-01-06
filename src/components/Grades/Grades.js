@@ -6,7 +6,7 @@ import GradeFilter from "./GradeFilter";
 import GradeChart from "./GradeChart";
 
 const Grades = (props) => {
-  const [filteredYear, setFilteredYear] = useState("2018");
+  const [filteredYear, setFilteredYear] = useState("2023");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);

@@ -42,20 +42,21 @@ function App(props) {
       score: 93.4,
       date: new Date(2022, 6, 6),
     },
-
   ];
 
   const [grades, setGrades] = useState(dummy_grades);
 
   const addGradeHandler = (grade) => {
-    setGrades ((prevGrade) => {
-      return[grade, ...prevGrade]
-    })
+    setGrades((prevGrade) => {
+      return [grade, ...prevGrade];
+    });
   };
-
+  console.log(grades);
   return (
     <div>
-      <h2><NewGrade onAddGrade={addGradeHandler} /></h2>
+      <h2>
+        <NewGrade onAddGrade={addGradeHandler} />
+      </h2>
       <Grades items={grades} />
     </div>
   );
